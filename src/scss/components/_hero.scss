@@ -1,0 +1,54 @@
+.hero {
+  padding-top: 162px;
+  min-height: 800px;
+  background-color: var(--dark-color);
+
+  @include high-desktop {
+    min-height: auto;
+
+  }
+
+  &__inner {
+    @include flex;
+  }
+
+  &__content {
+    max-width: 516px;
+  }
+
+  &__title {
+    padding-top: 80px;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    color: var(--light-color);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @include high-desktop {
+      font-size: calc(30px + 16 * ((100vw - 320px) / (1280 - 320)));
+    }
+
+    &-text {
+      display: block;
+      max-width: 90%;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+      color: var(--light-color);
+      text-transform: initial;
+    }
+  }
+
+  &__image {
+    transform: translateX(167px);
+
+    @include high-desktop {
+      transform: translateX(10px);
+    }
+  }
+
+
+
+
+}
