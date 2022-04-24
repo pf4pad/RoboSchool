@@ -6,8 +6,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
 .page {
@@ -21,12 +19,6 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 img {
@@ -44,18 +36,21 @@ a {
 }
 
 .is-hidden {
-  display: none !important;
-  /* stylelint-disable-line declaration-no-important */
+  display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
-button {
+.btn-reset {
   border: none;
   padding: 0;
   background: transparent;
   cursor: pointer;
 }
 
-
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .input-reset {
   -webkit-appearance: none;
@@ -119,4 +114,8 @@ button {
 
 .section-offset {
   padding: 120px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
 }

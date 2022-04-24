@@ -1,3 +1,5 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
 // если вы хотите использовать sass-переменные - удалите root
 // colors
 :root {
@@ -14,5 +16,4 @@
   --accent-color: #d52027;
   --dark-color: #141024;
   --text-color: rgba(20, 16, 36, 0.7);
-  --light-color-x: #F9F9F9;
 }

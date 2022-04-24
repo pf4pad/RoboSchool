@@ -1,12 +1,9 @@
 import { validateForms } from '../functions/validate-forms';
+
 const rules = [
   {
-    ruleSelector: '.form__input-name',
+    ruleSelector: '.input-name',
     rules: [
-      {
-        rule: 'minLength',
-        value: 3
-      },
       {
         rule: 'required',
         value: true,
@@ -15,7 +12,7 @@ const rules = [
     ]
   },
   {
-    ruleSelector: '.form__input-tel',
+    ruleSelector: '.input-tel',
     tel: true,
     telError: 'Введите корректный телефон',
     rules: [
@@ -27,7 +24,7 @@ const rules = [
     ]
   },
   {
-    ruleSelector: '.form__input-email',
+    ruleSelector: '.input-email',
     rules: [
       {
         rule: 'required',
@@ -37,9 +34,8 @@ const rules = [
       {
         rule: 'email',
         value: true,
-        errorMessage: 'Введите корректный Email',
+        errorMessage: 'Введите корректный Email!'
       }
-
     ]
   },
 ];

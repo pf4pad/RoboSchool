@@ -3,6 +3,7 @@
 
   &__btn {
     @include flex-all-center;
+
     border-radius: 100%;
     width: 24px;
     height: 24px;
@@ -14,14 +15,14 @@
     }
 
     &:focus {
-      +.tooltip__txt {
+      + .tooltip__txt {
         opacity: 1;
         visibility: visible;
       }
     }
 
     @include hover {
-      +.tooltip__txt {
+      + .tooltip__txt {
         opacity: 1;
         visibility: visible;
       }
@@ -29,18 +30,17 @@
   }
 
   &__txt {
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(20, 16, 36, 0.1);
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
     text-align: center;
     color: var(--dark-color);
     background: var(--light-color);
-    box-shadow: 0px 2px 8px rgba(20, 16, 36, 0.1);
-    border-radius: 5px;
-    padding: 15px 20px;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
   }
-
 }

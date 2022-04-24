@@ -23,7 +23,7 @@ export const validateForms = (selector, rules, afterSend) => {
       if (item.tel) {
         item.rules.push({
           rule: 'function',
-          validator: function () {
+          validator: function() {
             const phone = telSelector.inputmask.unmaskedvalue();
             return phone.length === 10;
           },
@@ -33,28 +33,7 @@ export const validateForms = (selector, rules, afterSend) => {
     }
   }
 
-  // const validation = new JustValidate(selector);
-  const validation = new JustValidate(
-    '.order__form',
-    {
-      errorFieldCssClass: 'is-invalid',
-      errorFieldStyle: {
-        border: '1px solid red',
-      },
-      errorLabelCssClass: 'is-label-invalid',
-      errorLabelStyle: {
-        color: 'white',
-        textDecoration: 'underlined',
-      },
-      focusInvalidField: true,
-      lockForm: true,
-      // tooltip: {
-      //   position: 'left',
-      // },
-      errorContainer: '.errors-container',
-    },
-
-  );
+  const validation = new JustValidate(selector);
 
   for (let item of rules) {
     validation
